@@ -22,9 +22,15 @@ const displaySearchResult= docs =>{
       <p class="card-title">Similar Book Found: ${docs.numFound}</p>
       <p>Start: ${docs.start}</p>
       <p>
-     ${docs.title}
+     Title: ${docs.docs[0].title}
       </p>
-      <img src="https://covers.openlibrary.org/b/id/554106-M.jpg" class="w-20 h-20" alt="...">
+      <p>
+      Type: ${docs.docs[0].type}
+       </p>
+       <p>
+       Publish Year: ${docs.docs[0].publish_year}
+        </p>
+      <img src="https://covers.openlibrary.org/b/id/${docs.docs[0].isbn}-M.jpg" class="w-20 h-20" alt="...">
       
      
     </div>
